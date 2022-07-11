@@ -1,4 +1,5 @@
 ﻿using MarsProject2022.Pages;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -11,23 +12,26 @@ namespace MarsProject2022.Utilities
 {
     public class CommonDriver
     {
-        public static IWebDriver driver;
+       
+        public  IWebDriver driver;
+
         LogInPage LogInPageObj = new LogInPage();
 
+        [OneTimeSetUp]
         public void LoginActions()
         {
             //Open Chrome Browser
             driver = new ChromeDriver();
 
             //login page object initialization and definition
-            LogInPage loginpageObj = new LogInPage();
-            loginpageObj.LoginSteps(driver);
+            LogInPage LogInPageObj = new LogInPage();
+            LogInPageObj.LoginSteps(driver);
 
         }
-
+        [OneTimeTearDown]
         public void CloseTestRun()
         {
-            driver.Quit();
+            //driver.Quit();
         }
 
 

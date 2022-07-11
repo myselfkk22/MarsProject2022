@@ -23,6 +23,8 @@ namespace MarsProject2022.StepDefintion
 
         }
 
+        //Language
+
         [When(@"I add language on my profile\.")]
         public void WhenIAddLanguageOnMyProfile_()
         {
@@ -85,6 +87,8 @@ namespace MarsProject2022.StepDefintion
             Assert.That(deleteLanguageIcon != "Telugu", "Sellor record has not been deleted successfully.");
 
         }
+
+        //Education
 
         [Given(@"I logged into the Mars portal successfully\.")]
         public void GivenILoggedIntoTheMarsPortalSuccessfully_()
@@ -162,21 +166,22 @@ namespace MarsProject2022.StepDefintion
             Assert.That(deleteEducation != "United States", "Sellor record has not been deleted successfully.");
         }
 
+        //Cirtification
 
         [When(@"I add certification on my profile\.")]
         public void WhenIAddCertificationOnMyProfile_()
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            CertificationPageObj.addCertification(driver);
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            CertificationsPageObj.addCertifications(driver);
         }
 
         [Then(@"New Certificate details will be added\.")]
         public void ThenNewCertificateDetailsWillBeAdded_()
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            string newCertification = CertificationPageObj.GetNewCertification(driver);
-            string newCertifiedFrom = CertificationPageObj.GetNewCertifiedFrom(driver);
-            string newYear = CertificationPageObj.GetNewYear(driver);
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            string newCertification = CertificationsPageObj.GetNewCertification(driver);
+            string newCertifiedFrom = CertificationsPageObj.GetNewCertifiedFrom(driver);
+            string newYear = CertificationsPageObj.GetNewYear(driver);
             // Assertion
             Assert.That(newCertification == "TestAnalyst", "Actual language and Expected language do Not match");
             Assert.That(newCertifiedFrom == "MVP", "Actual language level and Expected language level do Not match");
@@ -186,17 +191,18 @@ namespace MarsProject2022.StepDefintion
         [When(@"I edit '([^']*)', '([^']*)', '([^']*)'\.")]
         public void WhenIEdit_(string p0, string p1, string p2)
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            CertificationPageObj.editCertification(driver, p0, p1, p2);
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            CertificationsPageObj.editCertifications(driver, p0, p1, p2);
         }
 
-        [Then(@"The Certificate should have edited '([^']*)','([^']*)', '([^']*)' updated\.")]
-        public void ThenTheCertificateShouldHaveEditedUpdated_(string p0, string p1, string p2)
+        [Then(@"The Certificate should have edited '([^']*)','([^']*)', '([^']*)' \.")]
+        public void ThenTheCertificateShouldHaveEdited_(string p0, string p1, string p2)
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            string editCertificate = CertificationPageObj.GetEditCertificate(driver);
-            string editCertifiedFrom = CertificationPageObj.GeteditCertifiedFrom(driver);
-            string editCertifiedYear = CertificationPageObj.GeteditCertifiedYear(driver);
+
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            string editCertificate = CertificationsPageObj.GetEditCertificate(driver);
+            string editCertifiedFrom = CertificationsPageObj.GeteditCertifiedFrom(driver);
+            string editCertifiedYear = CertificationsPageObj.GeteditCertifiedYear(driver);
             // Assertion
             Assert.That(editCertificate == p0, "Actual edited Certificate and Expected edited Certificate do Not match");
             Assert.That(editCertifiedFrom == p1, "Actual edited Certificate and Expected edited Certificate do Not match");
@@ -204,20 +210,21 @@ namespace MarsProject2022.StepDefintion
         }
 
 
+
         [When(@"I delete Certification from Certification record")]
         public void WhenIDeleteCertificationFromCertificationRecord()
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            CertificationPageObj.deleteCertification(driver);
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            CertificationsPageObj.deleteCertifications(driver);
         }
 
         [Then(@"The Certification record should be deleted successfully")]
         public void ThenTheCertificationRecordShouldBeDeletedSuccessfully()
         {
-            CertificationsPage CertificationPageObj = new CertificationsPage();
-            string deleteCertification = CertificationPageObj.GetDeleteCertifications(driver);
+            CertificationsPage CertificationsPageObj = new CertificationsPage();
+            string deleteCertifications = CertificationsPageObj.GetDeleteCertifications(driver);
             // Assertion
-            Assert.That(deleteCertification != "Diploma", "Sellor record has not been deleted successfully.");
+            Assert.That(deleteCertifications != "Diploma", "Sellor record has not been deleted successfully.");
         }
     }
 }

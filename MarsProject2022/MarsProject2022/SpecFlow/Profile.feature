@@ -3,11 +3,7 @@
 AAs a seller,
 I want the feature to add my Profile Details
 So that the people seeking for some skills can look into my details. short summary of the feature
-@LoginSuccessful
-Scenario: Confirmation of successful login with valid credentials
-	Given Login with valid email address and password 
-	When I logged into the Mars portal.
-	Then Then the seller name shold appear in the profile page
+
 
 @AddLanguage
 Scenario: 1-1 add Language on profile. 
@@ -67,7 +63,7 @@ Scenario: 3-1 To add certification that seller know.
 Scenario: 3-2 To update certification that seller know. 
 	Given I logged into the Mars portal. 
 	When  I edit '<Certificate>', '<CertifiedFrom>', '<Year>'. 
-	Then The Certificate should have edited '<Certificate>','<CertifiedFrom>', '<Year>' updated.
+	Then The Certificate should have edited '<Certificate>','<CertifiedFrom>', '<Year>' .
 Examples: 
     | Certificate | CertifiedFrom | Year |
     | ISB         | TAFE            | 2016 |

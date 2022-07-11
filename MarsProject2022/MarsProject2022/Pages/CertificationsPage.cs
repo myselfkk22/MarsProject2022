@@ -1,14 +1,8 @@
 ﻿using MarsProject2022.Utilities;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MarsProject2022.Profile_Pages
+namespace MarsProject2022.Pages
 {
     public class CertificationsPage
     {
@@ -134,12 +128,13 @@ namespace MarsProject2022.Profile_Pages
             deleteCertificationsIcon.Click();
         }
         //Identify certification Tab and click
-        public string GetDeleteCertification(IWebDriver driver)
+        public string GetDeleteCertifications(IWebDriver driver)
         {
             WaitHelpers.WaitToBeClickable(driver, "XPath", "//div/section[2]/div/div/div/div[3]/form/div[1]/a[4]", 5);
             IWebElement certificationButton = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
             return certificationButton.Text;
         }
+
 
     }
 }

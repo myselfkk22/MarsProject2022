@@ -2,13 +2,6 @@
 using MarsProject2022.Pages;
 using MarsProject2022.Utilities;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace MarsProject2022;
@@ -59,23 +52,25 @@ public class Profile_Tests : CommonDriver
 
 
 
+
     [Test, Order(7)]
-    public void AddCertification()
+    public void AddCertifications()
     {
         CertificationsPage CertificationsPageObj = new CertificationsPage();
-        CertificationsPageObj.addCertification(driver);
+        CertificationsPageObj.addCertifications(driver);
     }
     [Test, Order(8)]
     public void editCertifications()
     {
 
         CertificationsPage CertificationsPageObj = new CertificationsPage();
-        CertificationsPageObj.editCertification(driver, "dummy", "dummy1", "dummy2");
+        CertificationsPageObj.editCertifications(driver, "dummy", "dummy1", "dummy2");
     }
     [Test, Order(9)]
     public void deleteCertifications()
     {
         CertificationsPage CertificationsPageObj = new CertificationsPage();
-        CertificationsPageObj.deleteCertification(driver);
+        CertificationsPageObj.deleteCertifications(driver);
     }
 }
+
