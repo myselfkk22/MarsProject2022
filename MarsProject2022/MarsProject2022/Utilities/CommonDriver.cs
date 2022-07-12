@@ -31,7 +31,7 @@ namespace MarsProject2022.Utilities
         [OneTimeTearDown]
         public void CloseTestRun()
         {
-            //driver.Quit();
+            driver.Quit();
         }
 
 

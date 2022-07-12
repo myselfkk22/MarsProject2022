@@ -31,18 +31,42 @@ Given  I logged into the Mars portal.
 When Existing "<given name>' and "<last name>'
 Then Then the profile name should be changed
 
-
-@AddSellerInfo
+@AddAvailability
 Scenario: Add profile availabity of the seller 
 Given  I logged into the Mars portal. 
-When Add Availability, Hours and EarnTarget on seller information 
-Then Seller information should be added successfully. 
+When Add Availability on seller information 
+Then Availability on the Seller information should be added successfully.
 
-@EditSellerInfo
-Scenario: Edit profile availabity from "Part time" to "Full time" of the seller 
+@EditAvailability
+Scenario: Edit profile availabity of the seller 
 Given  I logged into the Mars portal. 
-When  Edit '<Avaialbility>','<Hours>', '<EarnTarget>' from the drop down. 
-Then Seller information should be edited successfully
+When Edit Availability on seller information 
+Then Availability on the Seller information should be edited successfully.
+
+@AddHours
+Scenario: Add profile hours  of the seller 
+Given  I logged into the Mars portal. 
+When Add hours on seller information 
+Then hours on the Seller information should be added successfully.
+
+@EditHours
+Scenario: Edit  profile hours of the seller 
+Given  I logged into the Mars portal. 
+When Edit hours on seller information 
+Then EarnTarget on the Seller information should be edited successfully.
+
+@AddEarnTarget
+Scenario: Add profile EarnTarget of the seller 
+Given  I logged into the Mars portal. 
+When Add EarnTarget on seller information 
+Then EarnTarget on the Seller information should be added successfully.
+
+@EditEarnTarget
+Scenario: Edit profile EarnTarget of the seller 
+Given  I logged into the Mars portal. 
+When Edit EarnTarget on seller information 
+Then EarnTarget on the Seller information should be edited successfully.
+
  
 
 
@@ -57,13 +81,6 @@ Scenario: Edit Description about the seller
 Given     I logged into the Mars portal. 
 When   Edit Description in the description Textbox 
 Then Description of the seller should be edited successfully.
-
-@DeleteDescription
-Scenario: Delete Description about the seller 
-Given     I logged into the Mars portal. 
-When   Delete Description in the description Textbox 
-Then Description of the seller should be deleted successfully.
-
 
 
 
