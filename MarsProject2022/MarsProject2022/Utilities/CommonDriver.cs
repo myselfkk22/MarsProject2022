@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace MarsProject2022.Utilities
 {
+    [TestFixture]
     public class CommonDriver
     {
        

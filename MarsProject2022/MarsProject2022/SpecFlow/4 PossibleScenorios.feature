@@ -161,7 +161,7 @@ Scenario: 3-1 To add certification that seller know.
 Scenario: 3-2 To update certification that seller know. 
 	Given I logged into the Mars portal. 
 	When  I edit '<Certificate>', '<CertifiedFrom>', '<Year>'. 
-	Then The Certificate should have edited '<Certificate>','<CertifiedFrom>', '<Year>' updated.
+	Then The Certificate should have edited '<Certificate>','<CertifiedFrom>', '<Year>' 
 Examples: 
     | Certificate | CertifiedFrom | Year |
     | ISB         | TAFE            | 2016 |

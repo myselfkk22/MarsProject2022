@@ -28,7 +28,7 @@ namespace MarsProject2022.SpecFlow
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "PossibleScenorios.feature"
+#line 1 "4 PossibleScenorios.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
@@ -840,7 +840,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When(string.Format("I edit \'{0}\', \'{1}\', \'{2}\'.", certificate, certifiedFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 164
- testRunner.Then(string.Format("The Certificate should have edited \'{0}\',\'{1}\', \'{2}\' updated.", certificate, certifiedFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("The Certificate should have edited \'{0}\',\'{1}\', \'{2}\'", certificate, certifiedFrom, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
